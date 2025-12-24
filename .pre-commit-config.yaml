@@ -1,5 +1,5 @@
 repos:
-  - repo: https://github.com/yourname/sentinel-secrets
+  - repo: https://github.com/yourname/sentinel-secrets-
     rev: v0.1.0
     hooks:
       - id: sentinel-secrets
