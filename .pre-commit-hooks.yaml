@@ -4,3 +4,4 @@
   language: system
   stages: [commit]
   pass_filenames: false
+
