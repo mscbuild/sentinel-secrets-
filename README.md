@@ -1,1 +1,113 @@
-# SentinelSecrets
+ ### 📦 Project name
+
+ **SentinelSecrets**
+
+*🔐 Secret Scanner for CI/CD & Git Hooks*
+
+SentinelSecrets is an open-source tool for preventing secret leaks
+(API keys, tokens, passwords) in Git repositories and CI/CD.
+
+### 🎯 Project Summary
+
+A tool that automatically prevents secrets (API keys, tokens, passwords) from leaking before code is pushed to the repository:
+
+- Checks git diffs before committing
+
+- Uses regular expressions + entropy analysis
+
+- Suitable for local development and CI/CD
+
+- Generates reports in JSON and Markdown
+
+- Has a REST API with OpenAPI (Swagger)
+
+### 🧱 Architecture
+
+~~~bash
+sentinel-secrets/
+├── sentinel/
+│   ├── __init__.py
+│   ├── scanner.py        # Regex + entropy scanning
+│   ├── entropy.py        # Shannon entropy logic
+│   ├── git_utils.py      # Git diff extraction
+│   ├── report.py         # JSON / Markdown reports
+│   └── api.py            # FastAPI REST API
+│
+├── hooks/
+│   └── pre-commit        # Git hook
+│
+├── examples/
+│   └── report.md
+│
+├── tests/
+│   └── test_scanner.py
+│
+├── README.md
+├── SECURITY.md
+├── LICENSE
+├── requirements.txt
+└── main.py
+~~~
+
+### 🧠 Core logic (key fragments)
+
+**🔍 Regex + entropy search**
+
+**📊 Entropy**
+
+**Git pre-commit hook**
+
+**🌐 REST API (Swagger)**
+
+Swagger will be available on:
+
+~~~bash
+http://localhost:8000/docs
+~~~
+
+## Features
+
+- Git pre-commit scanning
+- Regex + entropy analysis
+- JSON/Markdown reports
+- REST API with OpenAPI
+- Suitable for CI/CD
+
+## Installation
+~~~bash
+git clone https://github.com/mscbuild/SentinelSecrets.git
+cd SentinelSecrets
+pip install -r requirements.txt
+~~~
+
+### Usage
+
+~~~bash
+python main.py --file app.py
+~~~
+
+### Architecture
+
+- scanner.py — signatures and search logic
+
+- entropy.py — random secret detection
+
+- git_utils.py — working with git diff
+
+- api.py — REST API
+
+### Threats this addresses
+
+- API key leaks to public repositories
+
+- Cloud account compromise
+
+- SOC2/ISO 27001 compliance violations
+
+- Supply chain attacks
+
+### 📜 LICENSE (MIT)
+
+MIT License
+
+Copyright (c) 2025 Mscbuild
