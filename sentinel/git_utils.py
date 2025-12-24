@@ -1,24 +1,6 @@
 import subprocess
 
-
 def get_staged_diff() -> str:
-    """
-    Returns git diff of staged files.
-    Used for pre-commit hook scanning.
-    """
-    try:
-        result = subprocess.run(
-            ["git", "diff", "--cached"],
-            stdout=subprocess.PIPE,
-            stderr=subprocess.PIPE,
-            text=True,
-            check=True
-        )
-        return result.stdout
-    except subprocess.Cimport subprocess
-
-def get_staged_diff() -> str:
-    """Return git diff of staged files."""
     try:
         result = subprocess.run(
             ["git", "diff", "--cached"],
@@ -30,5 +12,4 @@ def get_staged_diff() -> str:
         return result.stdout
     except subprocess.CalledProcessError as e:
         raise RuntimeError(f"Git diff failed: {e.stderr}")
-alledProcessError as e:
-        raise RuntimeError(f"Git diff failed: {e.stderr}")
+
