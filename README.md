@@ -21,7 +21,7 @@ A tool that automatically prevents secrets (API keys, tokens, passwords) from le
 
 - Has a REST API with OpenAPI (Swagger)
 
-###✅ Benefits and Problems Solved
+### ✅ Benefits and Problems Solved
 
 - **Leak Prevention:** Stops secrets from leaking into public and corporate repositories.
 - **Risk Mitigation (Shift Left Security):** Security is checked at the coding stage, not after deployment.
